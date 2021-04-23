@@ -12,6 +12,7 @@ export default class View {
 	}
 
 	addTodo(title, description){
-		this.model.addTodo(title,description);
+		const todo=this.model.addTodo(title,description);
+		todo
 	}
 }
