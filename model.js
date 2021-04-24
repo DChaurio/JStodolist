@@ -15,7 +15,7 @@ export default class Model {
 
 	addTodo(title, description){
 		const todo={
-			id=this.currentId++,
+			id:this.currentId++,
 			title,
 			description,
 			completed:false,
@@ -25,6 +25,11 @@ export default class Model {
 		console.log(this.todos);
 
 		return {...todo};
-		}
+        }
+        
+        removeTodo(id){
+            const index= this.todos.findIndex((todo) => todo.id===id);
+            console.log(this.todos[index]);
+        }
 	
 }
