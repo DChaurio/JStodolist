@@ -35,7 +35,7 @@ export default class Model {
         const index= this.findTodo(id);
         const todo= this.todos[index];
         todo.completed= !todo.completed;
-        console.log(this.todos);
+        this.save();
     }
 
 	addTodo(title, description){
@@ -48,9 +48,9 @@ export default class Model {
 
 		this.todos.push(todo);
 		console.log(this.todos);
+        this.save()
 
         return {...todo};
-        this.save()
         }
         
         removeTodo(id){
