@@ -15,10 +15,9 @@ export default class View {
 
     render(){
         const todos=this.model.getTodo();
-        for (todo of todos){
-            this.createRow(todo)
-        }
+        todos.forEach((todo) => this.createRow(todo));
     }
+    
 	addTodo(title, description){
         const todo=this.model.addTodo(title,description);
         this.createRow(todo);
